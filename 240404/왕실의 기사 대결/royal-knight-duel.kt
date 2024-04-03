@@ -101,8 +101,10 @@ class `전현수_왕실의_기사_대결` {
         val nx = knight.pos.x + dir.x
         val ny = knight.pos.y + dir.y
 
-        if (nx + knight.h !in 0..board.size ||
-            ny + knight.w !in 0..board.size
+        if (nx !in 0 until board.size ||
+            ny !in 0 until board.size ||
+            nx + knight.h !in 0 .. board.size ||
+            ny + knight.w !in 0 .. board.size
         ) return false
 
         for (i in nx until nx + knight.h) {
