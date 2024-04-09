@@ -57,10 +57,10 @@ class `전현수_포탑_부수기` {
 
             // 공격자 선정
             val attacker = findAttackerOrTarget(true)
-            recentAttackTime[attacker.x][attacker.y]++
-            board[attacker.x][attacker.y] += (n + m)
             // 타겟 선정
             val target = findAttackerOrTarget(false)
+            board[attacker.x][attacker.y] += (n + m)
+            recentAttackTime[attacker.x][attacker.y]++
 
             // 레이저 공격 확인용
             val laserInfo = board.map { row ->
