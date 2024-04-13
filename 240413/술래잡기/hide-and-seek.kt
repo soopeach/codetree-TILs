@@ -130,7 +130,6 @@ class `전현수_술래_잡기` {
                 }
             }
 
-
             // 술래 이동
             if (isForward) {
                 tagger += taggerDir
@@ -193,7 +192,7 @@ class `전현수_술래_잡기` {
             }
 
             val caughtFugitive = Stack<Int>()
-            for (i in 1 until 3) {
+            for (i in 0 until 3) {
                 val nextPos = tagger + (taggerDir * i)
                 if (nextPos in treeList) continue
 
